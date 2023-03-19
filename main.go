@@ -2,23 +2,24 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
-func ePrimo(num int)bool{
-	if num <=1 {
+func ePrimo(num int) bool {
+	if num <= 1 {
 		return false
 	}
-	if num == 2{
+	if num == 2 {
 		return true
 	}
-	if num % 2 == 0{
+	if num%2 == 0 {
 		return false
 	}
-	for i := 3; i * i <= num; i++ {
-		if num % i == 0 {
-			return false			
+	for i := 3; i*i <= num; i++ {
+		if num%i == 0 {
+			return false
 		}
-	}		
+	}
 	return true
 }
 
@@ -33,14 +34,20 @@ func main() {
 
 	fmt.Println("O tamanho da string e ", len(text))
 
-	num := 100	
-	
+	num := 100
+
 	for i := 0; i <= num; i++ {
 		numPrimo := ePrimo(i)
-		
+
 		if numPrimo {
-			fmt.Printf("O numero (%d) é primo", i)	
-			fmt.Println("")					
+			fmt.Printf("O numero (%d) é primo", i)
+			fmt.Println("")
 		}
 	}
+
+	text2 := "Este texto contém cinco palavras"
+	totalSpace := strings.Count(text2, " ") + 1	
+
+	fmt.Printf("O total de palavras é %d", totalSpace)
+	fmt.Println("")
 }
