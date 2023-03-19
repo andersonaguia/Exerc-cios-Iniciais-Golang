@@ -57,5 +57,15 @@ func main() {
 
 	fmt.Println("A soma dos numeros e: ", text3Capitalizado)
 
+	value := 2
+	exp := 8
+	total := value
+
+	for i := 1; i < exp; i++{
+		total = total * value		
+	}
+	
+	fmt.Printf("%d elevado a %d é: %d", value, exp, total)
+	fmt.Println()
 
 }
