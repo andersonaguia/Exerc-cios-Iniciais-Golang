@@ -23,6 +23,20 @@ func ePrimo(num int) bool {
 	return true
 }
 
+func ePalindromo(s string) bool {
+    // Remove os espaços em branco e converte a string para minúscula
+    s = strings.ToLower(strings.ReplaceAll(s, " ", ""))
+
+    // Percorre a metade da string e compara os caracteres opostos
+    for i := 0; i < len(s)/2; i++ {
+        if s[i] != s[len(s)-i-1] {
+            return false
+        }
+    }
+
+    return true
+}
+
 func main() {
 	n1 := 3
 	n2 := 3
@@ -68,6 +82,14 @@ func main() {
 	fmt.Printf("%d elevado a %d é: %d", value, exp, total)
 	fmt.Println()
 
+	sampleText := "Roma me tem amor"
+
+	if ePalindromo(sampleText) {
+        fmt.Println("A string", sampleText, "é um palíndromo!")
+    } else {
+        fmt.Println("A string", sampleText, "não é um palíndromo.")
+    }
+
 	number := 0
 	numberFatorial := number
 
@@ -100,5 +122,4 @@ func main() {
             fmt.Printf("%s: %d\n", word, count)
         }
     }
-
 }
