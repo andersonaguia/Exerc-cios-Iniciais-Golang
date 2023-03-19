@@ -46,7 +46,7 @@ func main() {
 	}
 
 	text2 := "Este texto contém cinco palavras"
-	totalSpace := strings.Count(text2, " ") + 1	
+	totalSpace := strings.Count(text2, " ") + 1
 
 	fmt.Printf("O total de palavras é %d", totalSpace)
 	fmt.Println("")
@@ -61,11 +61,25 @@ func main() {
 	exp := 8
 	total := value
 
-	for i := 1; i < exp; i++{
-		total = total * value		
+	for i := 1; i < exp; i++ {
+		total = total * value
 	}
-	
+
 	fmt.Printf("%d elevado a %d é: %d", value, exp, total)
+	fmt.Println()
+
+	number := 0
+	numberFatorial := number
+
+	if number == 0 {
+		numberFatorial = 1
+	} else {
+		for i := number - 1; i > 0; i-- {
+			numberFatorial = numberFatorial * i
+		}
+	}
+
+	fmt.Printf("%d! é: %d", number, numberFatorial)
 	fmt.Println()
 
 }
