@@ -50,4 +50,12 @@ func main() {
 
 	fmt.Printf("O total de palavras é %d", totalSpace)
 	fmt.Println("")
+
+	text3 := "este é um texto a ser capitalizado"
+
+	text3Capitalizado := strings.ToUpper(text3)
+
+	fmt.Println("A soma dos numeros e: ", text3Capitalizado)
+
+
 }
