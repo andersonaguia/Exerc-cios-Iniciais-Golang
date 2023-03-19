@@ -82,4 +82,23 @@ func main() {
 	fmt.Printf("%d! é: %d", number, numberFatorial)
 	fmt.Println()
 
+	input := "Ela é a mãe da minha mãe e eu sou mãe da minha filha"
+	inputUpper := strings.ToUpper(input)
+
+    words := strings.Fields(inputUpper)
+
+    counts := make(map[string]int)
+    for _, word := range words {
+        counts[word]++
+    }
+
+    fmt.Printf("Palavras repetidas no texto '%s': ", inputUpper)
+	fmt.Println()
+
+    for word, count := range counts {
+        if count > 1 {
+            fmt.Printf("%s: %d\n", word, count)
+        }
+    }
+
 }
